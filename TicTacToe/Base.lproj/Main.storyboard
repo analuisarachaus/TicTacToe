@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,215 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tog-eU-GK7">
+                                <rect key="frame" x="16" y="279" width="361" height="300"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZH-Vj-EKC">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NB1-PI-I7J">
+                                                <rect key="frame" x="0.0" y="0.0" width="118.33333333333333" height="100"/>
+                                                <color key="backgroundColor" red="0.85882353779999998" green="0.82745099070000006" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=" ">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="thin" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="botaoJogo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lQ3-Nw-7VR"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qe2-j1-e9Y">
+                                                <rect key="frame" x="118.33333333333334" y="0.0" width="1" height="100"/>
+                                                <color key="backgroundColor" red="0.63921570780000003" green="0.34117650989999998" blue="0.84313726430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1" id="vDC-8K-05e"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZR-ug-geH">
+                                                <rect key="frame" x="119.33333333333334" y="0.0" width="120.33333333333334" height="100"/>
+                                                <color key="backgroundColor" red="0.85882353779999998" green="0.82745099070000006" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=" ">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="thin" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="botaoJogo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k9s-Ep-igD"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WIA-ev-KVt">
+                                                <rect key="frame" x="239.66666666666666" y="0.0" width="1" height="100"/>
+                                                <color key="backgroundColor" red="0.61176472900000001" green="0.47450977560000002" blue="0.79215681550000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1" id="1Fz-yW-yIw"/>
+                                                    <constraint firstAttribute="height" constant="1" id="UZm-zu-39f"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Euo-u7-Gtk">
+                                                <rect key="frame" x="240.66666666666671" y="0.0" width="120.33333333333334" height="100"/>
+                                                <color key="backgroundColor" red="0.85882353779999998" green="0.82745099070000006" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="    ">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="thin" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="botaoJogo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="inF-ww-HcB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.61176472900000001" green="0.47450977560000002" blue="0.79215681550000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="DQJ-8p-fV2"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mEp-Ez-D5C">
+                                        <rect key="frame" x="0.0" y="100" width="361" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6c-Db-AYH">
+                                                <rect key="frame" x="0.0" y="0.0" width="120.33333333333333" height="100"/>
+                                                <color key="backgroundColor" red="0.85882353779999998" green="0.82745099070000006" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="  ">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="thin" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="botaoJogo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rfR-CM-1cq"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mzr-1b-eoK">
+                                                <rect key="frame" x="120.33333333333334" y="0.0" width="1" height="100"/>
+                                                <color key="backgroundColor" red="0.61176472900000001" green="0.47450977560000002" blue="0.79215681550000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="nGl-GN-CPp"/>
+                                                    <constraint firstAttribute="width" constant="1" id="wb9-I6-Hzm"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYp-Fj-jyC">
+                                                <rect key="frame" x="121.33333333333334" y="0.0" width="120.33333333333334" height="100"/>
+                                                <color key="backgroundColor" red="0.85882353779999998" green="0.82745099070000006" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="  ">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="thin" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="botaoJogo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="upq-UI-iYm"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="stY-0A-Pp9">
+                                                <rect key="frame" x="241.66666666666669" y="0.0" width="1" height="100"/>
+                                                <color key="backgroundColor" red="0.5411764979" green="0.43921568989999998" blue="0.74509805439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1" id="TfK-qH-Rdy"/>
+                                                    <constraint firstAttribute="height" constant="1" id="emX-bE-DNb"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6w-j2-u44">
+                                                <rect key="frame" x="242.66666666666671" y="0.0" width="118.33333333333334" height="100"/>
+                                                <color key="backgroundColor" red="0.85882353779999998" green="0.82745099070000006" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="  ">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="thin" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="botaoJogo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xmt-1L-fnH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.61176472900000001" green="0.47450977560000002" blue="0.79215681550000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="H6e-4l-ovc"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y8w-es-NpQ">
+                                        <rect key="frame" x="0.0" y="200" width="361" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72q-j5-pV4">
+                                                <rect key="frame" x="0.0" y="0.0" width="118.33333333333333" height="100"/>
+                                                <color key="backgroundColor" red="0.85882353779999998" green="0.82745099070000006" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="  ">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="thin" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="botaoJogo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I0U-bH-9cJ"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uL8-YW-KGX">
+                                                <rect key="frame" x="118.33333333333334" y="0.0" width="1" height="100"/>
+                                                <color key="backgroundColor" red="0.5411764979" green="0.43921568989999998" blue="0.74509805439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="Sp7-9x-auV"/>
+                                                    <constraint firstAttribute="width" constant="1" id="v4j-FT-v9a"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMI-CE-QYb">
+                                                <rect key="frame" x="119.33333333333334" y="0.0" width="120.33333333333334" height="100"/>
+                                                <color key="backgroundColor" red="0.85882353779999998" green="0.82745099070000006" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="    ">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="botaoJogo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nlr-TG-VVi"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WRv-21-LeO">
+                                                <rect key="frame" x="239.66666666666666" y="0.0" width="1" height="100"/>
+                                                <color key="backgroundColor" red="0.61176472900000001" green="0.47450977560000002" blue="0.79215681550000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1" id="Puy-C9-zXE"/>
+                                                    <constraint firstAttribute="height" constant="1" id="yvC-pH-DzV"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Off-ob-4dh">
+                                                <rect key="frame" x="240.66666666666671" y="0.0" width="120.33333333333334" height="100"/>
+                                                <color key="backgroundColor" red="0.85882353779999998" green="0.82745099070000006" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="    ">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="thin" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="botaoJogo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ek4-5j-FQE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.61176472900000001" green="0.47450977560000002" blue="0.79215681550000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="99y-4R-wcn"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.74901962280000001" green="0.55686277149999996" blue="0.66274511810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="tog-eU-GK7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="220" id="FE0-cN-bN0"/>
+                            <constraint firstItem="tog-eU-GK7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZSc-Gh-Fgx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tog-eU-GK7" secondAttribute="trailing" constant="16" id="n1q-VH-rSt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="arrayBotao" destination="NB1-PI-I7J" collectionClass="NSMutableArray" id="7sZ-mZ-MLb"/>
+                        <outletCollection property="arrayBotao" destination="oZR-ug-geH" collectionClass="NSMutableArray" id="8KP-o3-Lq8"/>
+                        <outletCollection property="arrayBotao" destination="Euo-u7-Gtk" collectionClass="NSMutableArray" id="PXL-Vd-rdJ"/>
+                        <outletCollection property="arrayBotao" destination="Q6c-Db-AYH" collectionClass="NSMutableArray" id="Qz0-ip-oct"/>
+                        <outletCollection property="arrayBotao" destination="jYp-Fj-jyC" collectionClass="NSMutableArray" id="Pe3-0H-F3a"/>
+                        <outletCollection property="arrayBotao" destination="h6w-j2-u44" collectionClass="NSMutableArray" id="Txf-Ew-WNx"/>
+                        <outletCollection property="arrayBotao" destination="72q-j5-pV4" collectionClass="NSMutableArray" id="SJD-WY-CsT"/>
+                        <outletCollection property="arrayBotao" destination="PMI-CE-QYb" collectionClass="NSMutableArray" id="k8r-i7-jex"/>
+                        <outletCollection property="arrayBotao" destination="Off-ob-4dh" collectionClass="NSMutableArray" id="FY1-8p-b0w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="57.251908396946561" y="-2.1126760563380285"/>
         </scene>
     </scenes>
 </document>
