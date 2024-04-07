@@ -13,6 +13,7 @@
 		C7867D3A2BBDC53F00BEB790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7867D382BBDC53F00BEB790 /* Main.storyboard */; };
 		C7867D3C2BBDC54000BEB790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7867D3B2BBDC54000BEB790 /* Assets.xcassets */; };
 		C7867D3F2BBDC54000BEB790 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7867D3D2BBDC54000BEB790 /* LaunchScreen.storyboard */; };
+		C7867D472BC3346800BEB790 /* TelaInicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7867D462BC3346800BEB790 /* TelaInicialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C7867D3B2BBDC54000BEB790 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7867D3E2BBDC54000BEB790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7867D402BBDC54000BEB790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7867D462BC3346800BEB790 /* TelaInicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaInicialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		C7867D312BBDC53F00BEB790 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				C7867D482BC357AF00BEB790 /* ViewController */,
 				C7867D322BBDC53F00BEB790 /* AppDelegate.swift */,
 				C7867D342BBDC53F00BEB790 /* SceneDelegate.swift */,
-				C7867D362BBDC53F00BEB790 /* ViewController.swift */,
 				C7867D382BBDC53F00BEB790 /* Main.storyboard */,
 				C7867D3B2BBDC54000BEB790 /* Assets.xcassets */,
 				C7867D3D2BBDC54000BEB790 /* LaunchScreen.storyboard */,
 				C7867D402BBDC54000BEB790 /* Info.plist */,
 			);
 			path = TicTacToe;
+			sourceTree = "<group>";
+		};
+		C7867D482BC357AF00BEB790 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C7867D462BC3346800BEB790 /* TelaInicialViewController.swift */,
+				C7867D362BBDC53F00BEB790 /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7867D472BC3346800BEB790 /* TelaInicialViewController.swift in Sources */,
 				C7867D372BBDC53F00BEB790 /* ViewController.swift in Sources */,
 				C7867D332BBDC53F00BEB790 /* AppDelegate.swift in Sources */,
 				C7867D352BBDC53F00BEB790 /* SceneDelegate.swift in Sources */,
